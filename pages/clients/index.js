@@ -6,10 +6,10 @@ export default function ClientsPage() {
     { id: 'Manuel', name: 'Manuel' },
   ];
 
-  const Clients = clients.map((item) => (
-    <li key={item.id}>
-      {/* <Link href={`/clients/${item.name}`}>{`${item.name} page`}</Link> */}
-      <Link href={{ pathname: '/clients/[id]', query: { id: clients.id } }}>{`${item.name} page`}</Link>
+  const Clients = clients.map((client) => (
+    <li key={client.id}>
+      {/* <Link href={`/clients/${client.name}`}>{`${client.name} page`}</Link> */}
+      <Link href={{ pathname: '/clients/[id]', query: { id: client.id } }}>{`${client.name} page`}</Link>
     </li>
   ));
 
